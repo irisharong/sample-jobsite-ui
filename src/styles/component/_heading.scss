@@ -1,0 +1,18 @@
+h1,
+h2,
+h3 {
+  color: $blue4;
+  //font-family: $base-font-family2;
+  font-weight: 600;
+  line-height: 1.2;
+  //letter-spacing: -1px;
+}
+.heading-1 {
+  font-size: em(48);
+}
+.heading-2 {
+  font-size: em(33);
+}
+.heading-3 {
+  font-size: em(24);
+}

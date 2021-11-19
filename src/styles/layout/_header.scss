@@ -1,0 +1,50 @@
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  > .text {
+    margin-right: auto;
+  }
+  .heading-2 {
+    font-size: em(24);
+  }
+  .-right {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.search-form {
+  background-image: url(../../assets/img/search.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-right: em(20);
+  margin-top: em(10);
+  width: 100%;
+  > input {
+    padding-left: em(40);
+    width: 100%;
+    @include placeholder {
+      font-weight: 600;
+      font-size: em(14);
+    }
+  }
+}
+
+.notify {
+  box-shadow: $box-shadow;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  > button {
+    display: grid;
+    place-content: center;
+    height: em(45);
+    width: em(45);
+  }
+  > .badge {
+    position: absolute;
+    right: -10px;
+  }
+}

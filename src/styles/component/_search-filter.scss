@@ -1,0 +1,19 @@
+.search-filter {
+  display: flex;
+  > div {
+    flex: 1;
+    + div {
+      margin-left: em(20);
+      width: 50%;
+    }
+  }
+}
+.-search-ui2 {
+  background: rgba($gray2, 0.5);
+  border-radius: em(10);
+  > .search-form {
+    margin-left: em(20);
+    margin-top: em(13);
+    margin-bottom: em(13);
+  }
+}

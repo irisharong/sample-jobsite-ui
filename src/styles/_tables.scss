@@ -1,0 +1,157 @@
+.custom-badge {
+  height: 36px;
+  padding: 8px 18px 8px 19px;
+  border-radius: 12px;
+  border: solid 2px #e1e1e1;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: $base-color-textdark;
+  margin-right: 16px;
+  cursor: pointer;
+
+  &--active {
+    background-color: $base-color-blue;
+    border: none;
+    color: #fff;
+  }
+}
+
+.card-list {
+  margin-top: 28px;
+  padding: 32px 16px;
+  border-radius: 24px;
+  background-color: #fff;
+
+  .load-button {
+    height: 56px;
+    margin: 0px;
+    margin-top: 24px;
+    padding: 0px 54px;
+    border: none;
+    border-radius: 16px;
+    background-color: $base-color-lightblue;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+
+  .card-item {
+    padding: 33px 22px 32px;
+    border: none;
+    border-radius: 12px;
+    background-color: $base-color-grey;
+    width: 100%;
+    margin-bottom: 16px;
+
+    .card-col-logo {
+      width: 48px;
+      margin-right: 24px;
+    }
+
+    .title {
+      margin: 0px;
+      margin-top: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $base-color-textdark;
+    }
+
+    .description {
+      margin: 0px;
+      margin-top: 16px;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      color: $base-color-textmedium;
+    }
+
+    .card-share-icons {
+      margin: 0px;
+      margin-top: 60px;
+
+      .icon-circle {
+        margin-right: 16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        font-size: 10px;
+        line-height: 32px;
+        color: $base-color-textmedium;
+      }
+    }
+
+    .logo-container {
+      width: 48px;
+      height: 48px;
+      padding: 18px 4px 18.3px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px 0 rgba(225, 227, 242, 0.32);
+      background-color: #fff;
+    }
+
+    .tag-line {
+      h1 {
+        margin: 0px;
+        font-size: 13px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        color: $base-color-blue;
+      }
+
+      h2 {
+        margin: 0px;
+        margin-left: 12px;
+        font-size: 13px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        color: $base-color-textlight;
+      }
+    }
+
+    &:hover {
+      background: $base-color-blue;
+
+      .title,
+      .description {
+        color: #fff;
+      }
+
+      .tag-line {
+        h1 {
+          color: $base-color-lightblue;
+        }
+      }
+
+      .card-share-icons {
+        .icon-circle {
+          background-color: $base-color-blue;
+          border: 1px solid #fff;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

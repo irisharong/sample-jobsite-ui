@@ -1,0 +1,30 @@
+.table-list {
+  > .tr {
+    + .tr {
+      margin-top: em(23);
+    }
+    display: flex;
+    * + * {
+      margin-left: em(8);
+    }
+    > .td {
+      font-size: em(13);
+      color: $gray;
+      font-weight: 600;
+      width: em(110);
+      line-height: 1.6;
+    }
+  }
+  .td+.td {
+    &.-blue2 {
+      color: $blue2;
+    }
+    a {
+      color: $blue;
+    }
+  }
+  .td + .td {
+    width: em(230);
+    color: $blue4;
+  }
+}

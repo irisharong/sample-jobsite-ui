@@ -1,0 +1,34 @@
+.tab-item {
+  display: flex;
+  > * + *{
+    margin-left: em(10);
+  }
+  > .tabs {
+    font-weight: 500;
+    font-size: em(14);
+    color: $gray;
+    padding: em(5) em(15);
+    border-radius: em(11);
+    display: inline-block;
+    margin-bottom: em(25);
+    transition: 200ms;
+    border: 2px solid transparent;
+    &:hover,
+    &.-active {
+      background: $blue;
+      color: white;
+    }
+  }
+  &.-ui2 {
+    justify-content: space-between;
+    > .tabs {
+      border-color: rgba($gray, 0.5);
+      color: $blue4;
+      &:hover,
+      &.-active {
+        color: white;
+        border: 2px solid transparent;
+      }
+    }
+  }
+}

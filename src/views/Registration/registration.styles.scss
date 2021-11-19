@@ -1,0 +1,43 @@
+.registration {
+	background-color: #E3E6EC;
+	height: 100%;
+	width: 100%;
+	display:flex; 
+	justify-content:center;
+	align-items:center;
+
+	&__logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 156px;
+		width: 1x56px;
+	}
+
+	&__title {
+		color: #11142D;
+		font-size: 40px;
+		font-weight: 600;
+		letter-spacing: -1px;
+		line-height: 60px;
+		margin-bottom: 24px;
+	}
+
+	&__new {
+		&-text {
+			color: #B2B3BD;
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 0;
+			line-height: 16px;
+		}
+		&-link {
+			color: #0049C6;
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 0;
+			line-height: 16px;
+			margin-left: 16px;
+		}
+	}
+}

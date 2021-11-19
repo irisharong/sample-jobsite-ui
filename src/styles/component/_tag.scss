@@ -1,0 +1,29 @@
+.tag-item {
+  display: flex;
+  flex-flow: row wrap;
+  margin: em(-10) em(-5) 0;
+  &.-icon{
+    
+    > .items{
+      width: em(43);
+      height: em(43);
+      border-radius: 50%;
+      padding: em(10);
+      + .items{
+        margin-left: em(12);
+      }
+    }
+  }
+  > .items {
+    color: $gray;
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: em(12);
+    border: 2px solid $gray2;
+    padding: em(6);
+    border-radius: em(10);
+    text-align: center;
+    margin: em(6);
+    width: em(96);
+  }
+}

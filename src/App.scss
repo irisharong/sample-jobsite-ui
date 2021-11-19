@@ -1,0 +1,41 @@
+// Variables
+@import "./styles/_variables.scss";
+
+// Page & Layout
+@import "./styles/_page.scss";
+
+// Assets
+@import "./styles/_logo.scss";
+
+//Components
+@import "./styles/_sidebar.scss";
+@import "./styles/_header.scss";
+@import "./styles/_tables.scss";
+
+//template
+@import "./styles/base/reset";
+@import "./styles/base/variables";
+@import "./styles/base/base";
+@import "./styles/base/mixins";
+@import "./styles/base/helper";
+
+@import "./styles/layout/menu";
+@import "./styles/layout/main";
+@import "./styles/layout/header";
+@import "./styles/layout/section";
+@import "./styles/layout/hero";
+@import "./styles/layout/segment";
+
+@import "./styles/component/button";
+@import "./styles/component/heading";
+@import "./styles/component/badge";
+@import "./styles/component/tab";
+@import "./styles/component/card";
+@import "./styles/component/table-list";
+@import "./styles/component/tag";
+@import "./styles/component/forms";
+@import "./styles/component/search-filter";
+@import "./styles/component/filter";
+@import "./styles/component/formatting";
+@import "./styles/component/drawer";
+@import "./styles/component/chat";

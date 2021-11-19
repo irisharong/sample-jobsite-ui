@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="734px" viewBox="0 0 1440 734" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <defs>
+        <linearGradient x1="0%" y1="61.8152006%" x2="100%" y2="38.1847994%" id="linearGradient-1">
+            <stop stop-color="#1E2B52" offset="0%"></stop>
+            <stop stop-color="#3B55A3" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,0 L1440,0 L1440,700 L200,700 C89.54305,700 1.3527075e-14,610.45695 0,500 L0,0 L0,0 Z" id="path-2"></path>
+        <filter x="-3.4%" y="-6.7%" width="106.8%" height="114.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="16" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.2304   0 0 0 0 0.333462937   0 0 0 0 0.64  0 0 0 0.432205734 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Initial-Marketing-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <g id="Hero-bg">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+            <circle id="Oval" fill="#FFFFFF" opacity="0.04" mask="url(#mask-3)" cx="117" cy="50" r="230"></circle>
+            <circle id="Oval" fill="#FFFFFF" opacity="0.08" mask="url(#mask-3)" cx="67" cy="0" r="230"></circle>
+            <circle id="Oval" fill="#FFFFFF" opacity="0.04" mask="url(#mask-3)" cx="267" cy="537" r="80"></circle>
+            <circle id="Oval" fill="#FFFFFF" opacity="0.04" mask="url(#mask-3)" cx="1414" cy="602" r="330"></circle>
+            <circle id="Oval" fill="#FFFFFF" opacity="0.08" mask="url(#mask-3)" cx="1464" cy="652" r="330"></circle>
+            <circle id="Oval" fill="#FFFFFF" opacity="0.04" mask="url(#mask-3)" cx="1054" cy="184" r="30"></circle>
+        </g>
+    </g>
+</svg>

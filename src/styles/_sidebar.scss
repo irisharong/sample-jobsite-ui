@@ -1,0 +1,75 @@
+.main-sidebar {
+  width: 256px;
+  background-color: $base-color-blue;
+  padding: 45px 20px;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  transition: -webkit-transform 0.3s ease-out 0s;
+  will-change: transform;
+  overflow-y: auto;
+  left: 0px;
+  transform: translateX(0%);
+
+  .logo,
+  .pages_list > h1 {
+    padding: 0px 20px;
+  }
+
+  .pages_list {
+    margin-top: 50px;
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: rgba(225, 227, 242, 0.5);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+
+      li {
+        display: inline-flex;
+        width: 100%;
+        height: 56px;
+        padding: 18px;
+        border-radius: 12px;
+        color: rgba(225, 227, 242, 0.8);
+        cursor: pointer;
+
+        p {
+          font-size: 14px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.43;
+          letter-spacing: normal;
+          line-height: 20px;
+        }
+
+        .fa {
+          height: 20px;
+          width: 20px;
+          margin-right: 18px;
+        }
+
+        &.active {
+          background-color: rgba(82, 180, 218, 0.4);
+
+          p,
+          .fa {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

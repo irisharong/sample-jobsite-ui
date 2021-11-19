@@ -1,0 +1,94 @@
+.drawer {
+  > .drawer-item + * {
+    margin-top: em(15);
+  }
+  &-item {
+    > .item {
+      border: 2px solid $gray2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+      transition: 200ms;
+      &.-active {
+        background: $blue;
+        border: 2px solid $blue;
+        .image {
+          box-shadow: 0 0 0 2px white;
+          border: 2px solid $blue;
+        }
+        time,
+        p,
+        .text {
+          color: white;
+        }
+        &:hover {
+          time,
+          p,
+          .text {
+            color: $blue;
+          }
+          .image {
+            box-shadow: 0 0 0 2px $blue;
+            border: 2px solid white;
+          }
+        }
+      }
+      &:hover {
+        background: rgba($blue2, 0.15);
+        border: 2px solid rgba($blue2, 0.15);
+      }
+      > .text {
+        margin-left: em(20);
+        margin-right: auto;
+        line-height: 1.5;
+        width: 60%;
+      }
+      padding: em(20) em(15);
+      border-radius: em(15);
+      > .image {
+        border-radius: 50%;
+        width: em(40);
+        height: em(40);
+        overflow: hidden;
+        box-shadow: 0 0 0 2px $blue3;
+        border: 1px solid transparent;
+      }
+      > .badge {
+        width: em(40);
+        height: em(40);
+        display: grid;
+        place-content: center;
+      }
+      p {
+        color: $blue4;
+        font-weight: 600;
+        font-size: em(14);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      time {
+        font-size: em(13);
+        display: block;
+        color: $gray3;
+      }
+    }
+  }
+  > .head {
+    > .text {
+      margin-right: auto;
+      line-height: 1.4;
+      color: $gray3;
+      font-size: em(12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: em(20) em(25);
+    }
+    img {
+      max-width: em(18);
+      margin-right: em(8);
+    }
+  }
+}

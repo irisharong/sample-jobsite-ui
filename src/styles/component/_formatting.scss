@@ -1,0 +1,23 @@
+.formatting {
+  border-bottom: 1px solid rgba($gray2, 0.5);
+  margin-left: em(-15);
+  margin-right: em(-15);
+  padding-left: em(25);
+  padding-right: em(25);
+  padding-bottom: em(20);
+  display: flex;
+  > .button {
+    + .button {
+      margin-left: em(20);
+      &.ml-a {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.paragraph{
+  > * + *{
+    margin-top: em(20);
+  }
+}

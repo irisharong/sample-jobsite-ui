@@ -1,0 +1,227 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+	background-color: $base-color-grey;
+	margin-left: 256px;
+	padding: 48px 65px 65px 65px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.content {
+	width: 60%;
+	margin-top: 48px;
+}
+
+.pay-toggle {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pay-toggle li:not(:last-child) {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 90px;
+  height: 58px;
+  position: relative;
+  text-align: center;
+}
+
+.pay-toggle li:nth-child(2) {
+  margin-right: 20px;
+}
+
+.pay-toggle li:not(:last-child) label,
+.pay-toggle li:not(:last-child) input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pay-toggle input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.pay-toggle input[type="radio"]:checked+label,
+.Checked+label {
+  border: 2px solid #1E3E85;
+	color: #000;
+}
+
+.pay-toggle li:not(:last-child) label {
+  padding: 18px 0px;
+  border: 2px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+  border-radius: 12px;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.pay-toggle label:hover {
+  background: #DDD;
+}
+
+.membership-toggle {
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+}
+
+.membership-toggle input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+  display: none;
+}
+
+.membership-toggle>li:first-child {
+  margin: 0 10px 0 0;
+}
+
+.membership-toggle>li:last-child {
+  margin-right:0;
+}
+
+.membership-toggle li {
+  float: left;
+  position: relative;
+  width: 235px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  padding: 5px;
+  height: 415px;
+}
+
+.membership-toggle li label {
+  padding: 15px;
+}
+
+.membership-option p {
+  font-size: 0.85rem;
+}
+
+.membership-option h1 {
+  font-weight: bolder;
+  font-style: italic;
+  color: #1E3E85;
+  font-size: 2rem;
+}
+
+.membership-toggle li label {
+  height: 401px;
+}
+
+.membership-toggle input[type="radio"]:checked+label,
+.Checked+label {
+  color: #000;
+  border-radius: 15px;
+  height: 401px;
+  background-image: linear-gradient(to right bottom, #52B4DA, #1E3E85);
+
+  h1, p {
+    color: #fff;
+  }
+  .price {
+    color: #96F154;
+  }
+}
+
+.review-desc {
+  height: 100px;
+}
+
+.star-rating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.on {
+  color: #52B4DA;
+}
+.off {
+  color: #ccc;
+}
+
+// search checkbox button
+div label input {
+  margin-right:100px;
+}
+body {
+   font-family:sans-serif;
+}
+
+#ck-button {
+   margin:4px;
+   overflow:auto;
+   float:left;
+}
+
+#ck-button label {
+   float:left;
+   margin-bottom: 0;
+}
+
+#ck-button label span {
+   text-align:center;
+   padding: 8px 25px;
+   display:block;
+   border-radius:12px;
+   border:2px solid #D0D0D0;
+   font-weight: 700;
+   color: #000;
+}
+
+#ck-button label input {
+   position:absolute;
+   top:-20px;
+}
+
+#ck-button input:checked + span {
+   background-color:#1e3e85;
+   color:#fff;
+   border:2px solid #1e3e85;
+}
+
+.close-button {
+  float: "right";
+  border-radius: "50%";
+  box-shadow: "0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%)";
+  margin: "0!important";
+}
+
+button.MuiTab-root.Mui-selected {
+  box-shadow: none!important;
+  border-radius: 12px!important;
+}
+
+.star-rating .star {
+  font-size: 10px;
+}
+
+.dialog-content {
+  padding: 1em 0.2em;
+  >.head {
+    margin-bottom: 1.875em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.button-plus {
+  position: absolute;
+  right: 0;
+  top:0;
+}

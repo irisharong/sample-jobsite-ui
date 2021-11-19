@@ -1,0 +1,125 @@
+.page-sidemenu {
+  background: $blue;
+  max-width: em(256);
+  height: auto;
+  min-height: 100vh;
+  padding: em(50) em(40) em(35);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: white;
+  }
+  > .logo {
+    display: block;
+    max-width: em(110);
+  }
+  .menu-label {
+    font-size: em(12);
+    display: block;
+    margin-top: em(40);
+    color: rgba($white1, 0.5);
+  }
+}
+
+.page-menu {
+  margin-top: em(27);
+  padding-left: 0;
+  li + li {
+    margin-top: em(10);
+  }
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: em(14);
+    color: rgba($white1, 0.8);
+    padding: em(14) em(20);
+    margin-left: em(-20);
+    margin-right: em(-20);
+    border-radius: 10px;
+    transition: 200ms;
+    > img {
+      max-width: em(24);
+      margin-right: em(20);
+    }
+    &.-active,
+    &:hover {
+      background: rgba($blue2, 0.4);
+      > span {
+        color: white;
+      }
+    }
+  }
+  .badge {
+    position: absolute;
+    right: em(17);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    line-height: 1.4;
+    width: em(35);
+    height: em(35);
+  }
+}
+
+.box-gradient {
+  margin-top: auto;
+  background: rgba($blue2, 0.7);
+  margin-left: -20px;
+  margin-right: -20px;
+  text-align: center;
+  padding: em(20);
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: em(40);
+  > img {
+    margin: em(20) 0;
+  }
+  img,
+  button {
+    position: relative;
+  }
+  > button {
+    width: 100%;
+    margin-left: em(-20);
+    margin-right: em(-20);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background: #52b4da;
+    width: calc(100% - 20px);
+    height: calc(99%);
+    left: 0;
+    opacity: 0.7;
+    z-index: 0;
+    border-radius: 20px;
+    margin: auto;
+    right: 0;
+    top: 10px;
+  }
+}
+
+.stacked-sidebar {
+  position: relative;
+  &::before {
+    content: "";
+    border-left: 1px solid $gray4;
+    height: calc(100em + 19px);
+    width: 1px;
+    position: absolute;
+    left: -60px;
+    top: -60px;
+  }
+  &.-right {
+    &::before {
+      border-right: 1px solid $gray4;
+      border-left: 0;
+      left: inherit;
+      right: em(-34);
+      height: calc(100em - 520px);
+      top: 0;
+    }
+  }
+}

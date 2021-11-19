@@ -1,0 +1,42 @@
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: 1.7em;
+    color: $base-font-color;
+    background-color: $base-background;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: initial;
+}
+
+textarea {
+    resize: none;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.page-container{
+    max-width: 1440px;
+    margin: auto;
+}
+
+.page-main{
+    display: flex;
+}

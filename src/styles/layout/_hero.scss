@@ -1,0 +1,96 @@
+.hero-banner {
+  background: $blue;
+  border-radius: em(20);
+  padding: em(60) em(60) 0;
+  position: relative;
+  [class^="heading"],
+  > .text {
+    color: white;
+  }
+  > .text {
+    > .heading-1 {
+      font-size: em(40);
+    }
+  }
+  .sub {
+    color: rgba(white, 0.7);
+    font-size: em(18);
+    &-mid{
+      font-size: em(26);
+      font-weight: 500;
+    }
+  }
+  .-icon {
+    position: absolute;
+    right: 30px;
+    top: 22px;
+  }
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 360px;
+}
+
+.hero-info {
+  background: white;
+  padding: em(20) em(55);
+  border-radius: em(20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  bottom: em(-70);
+  box-shadow: $box-shadow2;
+  .-offset{
+    max-width: em(470);
+  }
+  .heading-1,
+  .heading-2,
+  .heading-3 {
+    color: $blue4;
+  }
+  .label {
+    margin-top: em(10);
+    * + * {
+      margin-left: em(30);
+    }
+    > span {
+      color: $gray;
+      font-weight: 500;
+      font-size: em(17);
+    }
+  }
+  > .img {
+    max-width: em(125);
+    box-shadow: 0 0 0 em(3) $blue3;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+    > .active {
+      background: $green;
+      width: em(25);
+      height: em(25);
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: em(6);
+      right: em(-5);
+      border: em(3) solid white;
+    }
+  }
+  > .text {
+    margin-left: em(25);
+  }
+  > .status,
+  > .text {
+    margin-right: auto;
+  }
+  > .status {
+    > img {
+      display: block;
+      max-width: em(30);
+    }
+  }
+}

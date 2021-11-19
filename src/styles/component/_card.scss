@@ -1,0 +1,105 @@
+.box-card {
+  background: white;
+  padding: em(30);
+  border-radius: em(20);
+  box-shadow: $box-shadow;
+  width: 100%;
+  &-grid {
+    flex-flow: row wrap;
+    margin-left: em(-10);
+    margin-right: em(-10);
+    > * + * {
+      margin-left: 0;
+    }
+  }
+  > .head {
+    margin-bottom: em(30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    [class*="heading-"] {
+      font-size: em(18);
+    }
+  }
+  p {
+    font-size: em(14);
+  }
+  .has-image {
+    > img {
+      shape-outside: ellipse(150px 150px at 40% 40%);
+      margin: 0px 0 50px 50px;
+      float: right;
+      max-width: 270px;
+      width: 100%;
+    }
+  }
+  &.-bg-image {
+    overflow: hidden;
+    width: 100%;
+    max-width: em(353);
+    padding: em(18);
+    flex-basis: calc(30%);
+    margin: em(13);
+    > .image {
+      margin: em(-30) em(-30) em(20);
+      img {
+        width: 100%;
+        height: em(200);
+        object-fit: cover;
+      }
+    }
+    > .title {
+      color: $blue4;
+      font-size: em(17);
+      font-weight: 600;
+      font-family: $base-font-family2;
+    }
+    .cta {
+      margin-top: em(38);
+      border-top: 1px solid $gray2;
+      margin-left: em(-20);
+      margin-right: em(-20);
+      padding-left: em(20);
+      padding-right: em(20);
+    }
+  }
+}
+
+.box-inner {
+  padding: em(30) em(15);
+  border-radius: em(15);
+  border-top: 0;
+  &.px{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .formatting{
+    margin-top: em(-10);
+  }
+  &.-gray {
+    background: rgba($gray4, 0.2);
+    &:nth-child(even) {
+      background: rgba($white1, 0);
+    }
+  }
+  &.-blue {
+    background: $blue;
+    .meta {
+      a {
+        color: $gold;
+      }
+    }
+    .paragraph p {
+      color: white;
+    }
+    .title {
+      > a {
+        color: white;
+      }
+    }
+  }
+  &.-border {
+    border-bottom: 1px solid rgba($gray4, 0.8);
+    border-radius: 0;
+  }
+}

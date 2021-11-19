@@ -1,0 +1,181 @@
+.button {
+  font-weight: 600;
+  font-size: em(14);
+  color: $blue;
+  border-radius: 15px;
+  padding: em(17) em(40);
+  cursor: pointer;
+  text-align: center;
+  transition: 200ms;
+  
+  &.p {
+    padding: 0;
+  }
+  &.-round {
+    box-shadow: $box-shadow;
+    width: em(50);
+    height: em(50);
+    padding: em(14) 0;
+    border-radius: 50%;
+    transition: 200ms;
+    &:hover{
+      background: rgba($gray2, 0.2);
+      box-shadow: none;
+    }
+    > img{
+      max-width: em(20);
+    }
+  }
+  &.-gray{
+    background: $gray2;
+    color: $blue;
+    &:hover{
+      background: rgba($gray2, 0.5);
+    }
+  }
+  &.-full{
+    width: 100%;
+  }
+  &.-small {
+    display: block;
+    width: 100%;
+    padding: em(3) em(20);
+    border-radius: em(10);
+    margin-top: em(20);
+  }
+  &.-tiny{
+    width: em(28);
+    height: em(28);
+    background: rgba($gray2, 0.5);
+    padding: 0;
+    border-radius: em(4);
+    > img{
+      max-width: em(13);
+    }
+  }
+  &.-tiny.-boxed{
+    border: 1px solid #000;
+    padding: 0;
+    background: white;
+    width: em(22);
+    height: em(22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > img{
+      max-width: em(15);
+    }
+  }
+  &.-mid {
+    padding: em(7) em(18);
+  }
+  &.-link {
+    &:hover {
+      background: rgba($blue2, 0.1);
+    }
+  }
+  &.-has-icon {
+    display: flex;
+    align-items: center;
+    color: $blue2;
+    > * {
+      margin-left: em(10);
+      font-size: em(21);
+      line-height: 1.3;
+      width: em(21);
+      height: em(21);
+      padding: 0;
+    }
+  }
+  &.-blue {
+    background: $blue2;
+    color: white;
+    &:hover {
+      background: $blue;
+    }
+  }
+  &.-blue2 {
+    background: $blue;
+    color: white;
+    &:hover {
+      background: $blue2;
+    }
+  }
+  &.-white {
+    background: white;
+    &:hover {
+      background: rgba(white, 0.8);
+    }
+  }
+  &.-icon {
+    background: white;
+    line-height: 1;
+    width: em(48);
+    height: em(48);
+    border-radius: 50%;
+    padding: 5px;
+    > img {
+      max-width: em(20);
+    }
+  }
+  &-pop {
+    background: rgba($blue2, 0.5);
+    display: flex;
+    padding: 8px;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-left: -20px;
+    margin-right: -20px;
+    > img {
+      margin-right: em(10);
+      + div {
+        margin-right: em(25);
+      }
+    }
+    > div {
+      margin-top: -5px;
+    }
+    strong,
+    span {
+      color: white;
+      font-weight: 400;
+      font-size: em(14);
+    }
+    span {
+      display: block;
+      color: $white1;
+      line-height: 1;
+      font-size: em(13);
+    }
+  }
+}
+
+.cta{
+  display: flex;
+  align-items: center;
+  &.-group2{
+    > button{
+      width: 50%;
+      + button{
+        margin-left: em(20);
+      }
+    }
+  }
+}
+
+.star-button{
+  background-color: #E4E4E4;
+  border-radius: 16px;
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+    span{
+      color: #808191;
+    }
+}

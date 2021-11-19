@@ -1,0 +1,105 @@
+.chat {
+  + .chat {
+    margin-top: em(25);
+  }
+  &-item {
+    display: flex;
+    > .image {
+      margin-right: em(20);
+      border-radius: 50%;
+      overflow: hidden;
+      width: em(55);
+      height: em(55);
+      > img {
+        object-fit: cover;
+      }
+    }
+    > .text {
+      width: 85%;
+    }
+    .user {
+      margin-bottom: em(10);
+      a {
+        color: $blue4;
+        font-size: em(14);
+        font-weight: 600;
+      }
+      time {
+        font-size: em(12);
+        color: $gray3;
+        margin-left: em(15);
+      }
+    }
+
+    .message {
+      > * + * {
+        margin-top: em(10);
+      }
+      > div {
+        background: rgba($gray2, 0.25);
+        border-radius: 20px;
+        color: $gray3;
+        padding: em(10) em(20);
+        &:first-child {
+          border-radius: 20px 20px 20px 3px;
+        }
+        &:last-child {
+          border-radius: 3px 20px 20px 20px;
+        }
+      }
+      .attachment {
+        background: $blue5;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > p {
+          width: 80%;
+        }
+        &-item {
+          background: transparent;
+          padding: 0;
+          display: flex;
+          div{
+              font-weight: 500;
+          }
+          strong {
+            display: block;
+            color: $blue4;
+            line-height: 1;
+            font-size: em(14);
+          }
+          > a + a {
+            margin-left: em(10);
+          }
+          > a {
+            display: flex;
+            background: $blue6;
+            padding: em(8) em(10);
+            border-radius: 10px;
+            color: $blue;
+            font-size: em(14);
+          }
+          img {
+            width: 40px;
+            margin-right: em(20);
+            border-radius: 5px;
+          }
+        }
+      }
+      .-button {
+        background: $blue4;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 88px;
+        img {
+          max-width: em(18);
+          display: block;
+        }
+      }
+    }
+  }
+}

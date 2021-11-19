@@ -1,0 +1,38 @@
+.page-content {
+  margin: em(60) em(66) em(20);
+  width: 100%;
+}
+
+.page-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .stacked-sidebar {
+    margin-left: em(120);
+    &.-small {
+      margin-left: em(53);
+      width: 100%;
+      &::before{
+        left: -27px;
+      }
+    }
+    
+  }
+  [class*="-col"] {
+    width: 100%;
+  }
+  > * + * {
+    margin-left: em(68);
+  }
+
+  .-col2 {
+    max-width: 29%;
+  }
+  .-col3 {
+    max-width: 35%;
+  }
+
+  .-col4 {
+    max-width: 40%;
+  }
+}

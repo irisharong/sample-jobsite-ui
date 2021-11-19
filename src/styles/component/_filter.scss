@@ -1,0 +1,22 @@
+.filter {
+  &-inline {
+    display: flex;
+    align-items: center;
+    > * + * {
+      margin-top: 0;
+      margin-left: em(20);
+    }
+  }
+  > .foot {
+    margin-top: em(30);
+    padding-top: em(30);
+    border-top: 1px solid $gray2;
+    > h3{
+        margin-bottom: em(30);
+    }
+  }
+  .-reset {
+    font-weight: 600;
+    color: $gray;
+  }
+}
