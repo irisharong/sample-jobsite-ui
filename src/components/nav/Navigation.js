@@ -9,6 +9,14 @@ export const navigation = [
     name: "Find Work",
     icon: <img src="img/icon-menu-1.png" alt="" />,
     path: "/",
+    userRole: "contractor",
+  },
+  {
+    id: "find-help",
+    name: "Find Help",
+    icon: <img src="img/icon-menu-1.png" alt="" />,
+    path: "/help",
+    userRole: "employer",
   },
   {
     id: "your-jobs",
