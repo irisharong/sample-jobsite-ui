@@ -30,7 +30,7 @@ const defaultValues = {
 };
 const LoginForm = ({ handleClose }) => {
   const history = useHistory();
-  const user = JSON.parse(localStorage.getItem("user")); console.log(user);
+  const user = JSON.parse(localStorage.getItem("user"));
 
   if(user) {
     const redirectUrl = `/${user.user.role}`; console.log(redirectUrl);
