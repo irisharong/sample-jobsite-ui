@@ -1,4 +1,4 @@
-import './db/userDb';
+import './db/contractorDb';
 import './db/authDb';
 import mock from './mock';
 

@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faEnvelope, faCog } from '@fortawesome/fontawesome-free-solid';
+const user = JSON.parse(localStorage.getItem("user"));
+const settingsUrl = `/${user.user.role}`;
 
 export const navigation = [
   {
@@ -20,7 +22,7 @@ export const navigation = [
     id: "settings",
     name: "Settings",
     icon: <img src="img/icon-menu-3.png" alt="" />,
-    path: "/settings",
+    path: settingsUrl,
 
   }
 ];

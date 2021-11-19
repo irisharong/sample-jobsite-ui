@@ -7,6 +7,7 @@ export const submitLogin =
     return AuthService
       .login(email, password)
       .then((user) => { console.log(user);
+        
         return dispatch(loginSuccess());
       })
       .catch((errors) => {

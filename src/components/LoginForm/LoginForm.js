@@ -6,7 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { submitLogin } from "app/store/auth/loginSlice";
 import * as yup from "yup";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 
 import "./form.styles.scss";
 
@@ -30,8 +30,12 @@ const defaultValues = {
 };
 const LoginForm = ({ handleClose }) => {
   const history = useHistory();
-  const user = localStorage.getItem("user"); console.log(user);
+  const user = JSON.parse(localStorage.getItem("user")); console.log(user);
 
+  if(user) {
+    const redirectUrl = `/${user.user.role}`; console.log(redirectUrl);
+    history.push(redirectUrl);
+  }
   const dispatch = useDispatch();
   const authLogin = useSelector(({ login }) => login);
   const { control, setValue, formState, handleSubmit, reset, setError } =
@@ -72,11 +76,6 @@ const LoginForm = ({ handleClose }) => {
 
   return (
     <div className="form-main">
-      {success ? (
-        user.role === "contractor" ?
-          ( history.push("/settings")) :
-          ( history.push("/employer"))
-      ) : (
         <>
           {(errorMsg) && 
             <div className="form-main__error">
@@ -151,7 +150,6 @@ const LoginForm = ({ handleClose }) => {
             </div>
           </form>
         </>
-      )}
     </div>
   );
 };

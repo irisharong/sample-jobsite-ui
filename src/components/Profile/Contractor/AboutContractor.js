@@ -3,8 +3,8 @@ import { useParams } from 'react-router';
 
 import videoImage from "assets/img/video.png";
 
-export default function AboutContractor({ ...props }) {
-  const { profile } = props;
+export default function AboutContractor( props ) {
+  const { about } = props;
   const { id } = useParams();
 
   return (
@@ -12,20 +12,20 @@ export default function AboutContractor({ ...props }) {
       <div className="page-row">
         <div className="box-card -col4">
           <header className="head">
-            <h3 className="heading-3">About {profile.firstName}</h3>
+            <h3 className="heading-3">About {about.firstName}</h3>
           </header>
           <div className="table-list">
             <div className="tr">
               <div className="td">Hourly Rate</div>
-              <div className="td -blue2">{profile.rate}/hr</div>
+              <div className="td -blue2">{about.rate}/hr</div>
             </div>
             <div className="tr">
               <div className="td">Job Title</div>
-              <div className="td">{profile.jobTitle}</div>
+              <div className="td">{about.jobTitle}</div>
             </div>
             <div className="tr">
               <div className="td">Years of Experience</div>
-              <div className="td">{profile.yrsExperience} Years</div>
+              <div className="td">{about.yrsExperience} Years</div>
             </div>
             <div className="tr">
               <div className="td">FT/PT</div>
@@ -33,16 +33,16 @@ export default function AboutContractor({ ...props }) {
             </div>
             <div className="tr">
               <div className="td">Location</div>
-              <div className="td">{profile.location}</div>
+              <div className="td">{about.location}</div>
             </div>
             <div className="tr">
               <div className="td">Language</div>
-              <div className="td">{profile.language}</div>
+              <div className="td">{about.language}</div>
             </div>
             <div className="tr">
               <div className="td">Website</div>
               <div className="td">
-                <a href="#!">{profile.website}</a>
+                <a href="#!">{about.website}</a>
               </div>
             </div>
             <div className="tr">
@@ -74,15 +74,15 @@ export default function AboutContractor({ ...props }) {
         </div>
         <div className="box-card -col5">
           <header className="head">
-            <h3 className="heading-3">{profile.firstName}'s Bio</h3>
+            <h3 className="heading-3">{about.firstName}'s Bio</h3>
           </header>
           <div className="text">
             <p className="has-image -right">
               <img src={videoImage} alt="" />
-              {profile.bio}
+              {about.bio}
             </p>
             <p>
-              {profile.bio}
+              {about.bio}
             </p>
           </div>
         </div>

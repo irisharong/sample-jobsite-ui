@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+import axios from "axios";
 
 import AccountSettingsDialog from 'components/Dialog/AccountSettingsDialog';
 import AboutContractor from 'components/Profile/Contractor/AboutContractor';
@@ -16,12 +17,20 @@ import editPen from "assets/img/edit.png";
 import avatar from "assets/img/undraw_male_avatar_323b.png";
 import checkIcon from "assets/img/326571_check_circle_icon.png";
 
-import { profileDetail } from "mock/profileDetails";
-
 export default function JobSeekerProfile(props) {
   const { id } = useParams();
-  const data = profileDetail;
   const [open, setOpen] = useState(false);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios.get('/api/contractor/profile').then((res) => {
+      setData(res.data);
+    });
+  }, []);
+
+  if (!data) {
+    return null;
+  }
 
   const handleOpen = () => {
     setOpen(true);
@@ -30,6 +39,15 @@ export default function JobSeekerProfile(props) {
   const handleClose = () => {
     setOpen(false);
   };
+console.log(data);
+  const {
+    firstName,
+    lastName,
+    jobTitle,
+    jobs,
+    earned,
+    location,
+  } = data.about;
 
   return (
     <>
@@ -39,7 +57,7 @@ export default function JobSeekerProfile(props) {
           <SidebarMenu page='home' />
           <main className="page-content">
               <ProfileHeader
-                user={data.firstName}
+                user={firstName}
                 title={id ? "Candidate Profile" : "Your Profile"}
               />
               <section className="section-row">
@@ -48,8 +66,8 @@ export default function JobSeekerProfile(props) {
                     <img src={editPen} alt="" />
                   </button>
                   <div className="text mt-3">
-                    <h2 className="heading-1">{data.jobs} Jobs Completed</h2>
-                    <p className="sub mt-2">${data.earned} Earned over 12 Months</p>
+                    <h2 className="heading-1">{jobs} Jobs Completed</h2>
+                    <p className="sub mt-2">${earned} Earned over 12 Months</p>
                   </div>
                   <div className="hero-info">
                     <div className="img">
@@ -57,10 +75,10 @@ export default function JobSeekerProfile(props) {
                       <img src={avatar} alt="" />
                     </div>
                     <div className="text">
-                      <h2 className="heading-1">{data.firstName} {data.lastName}</h2>
+                      <h2 className="heading-1">{firstName} {lastName}</h2>
                       <p className="label">
-                        <span>{data.jobTitle}</span>
-                        <span>{data.location}</span>
+                        <span>{jobTitle}</span>
+                        <span>{location}</span>
                       </p>
                     </div>
                     <div className="status">
@@ -90,19 +108,19 @@ export default function JobSeekerProfile(props) {
                     {
                       tabButton: "About",
                       tabContent: (
-                        <AboutContractor profile={data} />
+                        <AboutContractor about={data.about} />
                       ),
                     },
                     {
                       tabButton: "Reviews",
                       tabContent: (
-                        <ReviewsContractor profile={data} />
+                        <ReviewsContractor reviews={data.reviews} />
                       ),
                     },
                     {
                       tabButton: "Protfolio",
                       tabContent: (
-                        <PortfolioContractor profile={data} />
+                        <PortfolioContractor portfolios={data.portfolio} />
                       ),
                     },
                   ]}

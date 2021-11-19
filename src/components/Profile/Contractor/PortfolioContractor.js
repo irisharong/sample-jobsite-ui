@@ -3,6 +3,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 
 export default function PortfolioContractor(props) {
+  const { portfolios } = props;  
 
   return (
     <div className="tab-container">
@@ -15,84 +16,21 @@ export default function PortfolioContractor(props) {
             </button>
           </header>
           <div className="page-row box-card-grid">
-            <div className="box-card -bg-image">
-              <div className="image">
-                <img src="https://picsum.photos/450/450" alt="" />
+            {portfolios.map((portfolio) => (
+              <div className="box-card -bg-image">
+                <div className="image">
+                  <img src={portfolio.image} alt="" />
+                </div>
+                <div className="title">
+                  <a href="#!">
+                    {portfolio.description}
+                  </a>
+                </div>
+                <div className="cta">
+                  <a href="#!" className="button -blue -small">View Project</a>
+                </div>
               </div>
-              <div className="title">
-                <a href="#!">
-                  Something cool and interesting about this project
-                </a>
-              </div>
-              <div className="cta">
-                <a href="#!" className="button -blue -small">View Project</a>
-              </div>
-            </div>
-            <div className="box-card -bg-image">
-              <div className="image">
-                <img src="https://picsum.photos/450/450" alt="" />
-              </div>
-              <div className="title">
-                <a href="#!">
-                  Something cool and interesting about this project
-                </a>
-              </div>
-              <div className="cta">
-                <a href="#!" className="button -blue -small">View Project</a>
-              </div>
-            </div>
-            <div className="box-card -bg-image">
-              <div className="image">
-                <img src="https://picsum.photos/450/450" alt="" />
-              </div>
-              <div className="title">
-                <a href="#!">
-                  Something cool and interesting about this project
-                </a>
-              </div>
-              <div className="cta">
-                <a href="#!" className="button -blue -small">View Project</a>
-              </div>
-            </div>
-            <div className="box-card -bg-image">
-              <div className="image">
-                <img src="https://picsum.photos/450/450" alt="" />
-              </div>
-              <div className="title">
-                <a href="#!">
-                  Something cool and interesting about this project
-                </a>
-              </div>
-              <div className="cta">
-                <a href="#!" className="button -blue -small">View Project</a>
-              </div>
-            </div>
-            <div className="box-card -bg-image">
-              <div className="image">
-                <img src="https://picsum.photos/450/450" alt="" />
-              </div>
-              <div className="title">
-                <a href="#!">
-                  Something cool and interesting about this project
-                </a>
-              </div>
-              <div className="cta">
-                <a href="#!" className="button -blue -small">View Project</a>
-              </div>
-            </div>
-            <div className="box-card -bg-image">
-              <div className="image">
-                <img src="https://picsum.photos/450/450" alt="" />
-              </div>
-              <div className="title">
-                <a href="#!">
-                  Something cool and interesting about this project
-                </a>
-              </div>
-              <div className="cta">
-                <a href="#!" className="button -blue -small">View Project</a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

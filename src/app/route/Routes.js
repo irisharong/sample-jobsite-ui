@@ -24,7 +24,7 @@ const Routes = props =>
       <Route exact path="/" component={FindWork} />
       <AuthRoutes>
         <Route exact path="/employer" component={EmployerProfile} />
-        <Route exact path="/settings" component={JobSeekerProfile} />
+        <Route exact path="/contractor" component={JobSeekerProfile} />
         <Route exact path="/candidate/:id" component={JobSeekerProfile} />
         <Route exact path="/job-detail" component={JobDetail} />
         <Route exact path="/help" component={FindHelp} />
