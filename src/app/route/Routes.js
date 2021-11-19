@@ -21,7 +21,6 @@ const Routes = props =>
     <Switch>
       <Route exact path="/login" component={LoginPage} />
       <Route exact path="/register" component={RegisterProfile} />
-      <Route exact path="/" component={FindWork} />
       <AuthRoutes>
         <Route exact path="/employer" component={EmployerProfile} />
         <Route exact path="/contractor" component={JobSeekerProfile} />
@@ -29,6 +28,7 @@ const Routes = props =>
         <Route exact path="/job-detail" component={JobDetail} />
         <Route exact path="/help" component={FindHelp} />
         <Route exact path="/jobs" component={YourJobs} />
+        <Route exact path="/" component={FindWork} />
       </AuthRoutes>
     </Switch>
   </Router>
